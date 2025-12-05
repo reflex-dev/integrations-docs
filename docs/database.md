@@ -6,28 +6,6 @@ description: Connect to SQL or NoSQL databases to query, store, and manage struc
 
 The Database Integration allows you to connect your AI-generated applications to real databases, automatically generating schemas and enabling data-driven functionality.
 
-```python exec
-import reflex as rx
-from reflex_image_zoom import image_zoom
-```
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src=rx.color_mode_cond(
-                "/ai_builder/integrations/database_light.webp",
-                "/ai_builder/integrations/database_dark.webp",
-            ),
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
-
 ## Supported Databases
 
 - **PostgreSQL** - Recommended for production applications

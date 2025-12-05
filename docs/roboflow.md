@@ -34,25 +34,7 @@ Video and streaming inputs are not yet supported.
 3. Click the `deploy` button, select `Images` and then select `Integrate with my app or website`.
 4. Copy the `workspace_name` and `workflow_id` from the provided code snippet.
 
-```python exec
-import reflex as rx
-from reflex_image_zoom import image_zoom
-```
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/roboflow.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
-
+[!Roboflow](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/roboflow.webp)
 
 ## Step 3: Configure the Integration in Your App
 

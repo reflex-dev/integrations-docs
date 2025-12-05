@@ -14,24 +14,7 @@ The **HubSpot Integration** allows your app to use [HubSpot](https://www.hubspot
 4. Copy the **Access Token** from the Auth tab.
    * **Example:** `pat-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
 
-```python exec
-import reflex as rx
-from reflex_image_zoom import image_zoom
-```
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/hubspot.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+[!HubSpot](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/hubspot.webp)
 
 ## Step 2: Configure the Integration in Your App
 

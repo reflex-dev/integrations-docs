@@ -22,12 +22,11 @@ With GitHub, your app can:
 3. Click **Generate new token** (classic or fine-grained).  
 4. Select the required scopes (e.g., `repo`, `workflow`, `read:user`).  
 5. Copy the token.  
-   *Example:*  
+   **Example token:**  
 ```
-
 ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
 ```
+(Note: Replace the above value with your actual GitHub token)
 
 > 💡 Fine-grained tokens are recommended for better security.
 

@@ -18,11 +18,6 @@ With Databricks, your app can:
 - Combine Databricks with AI models for advanced analytics.
 
 
-```python exec
-import reflex as rx
-from reflex_image_zoom import image_zoom
-```
-
 
 ## Step 1: Get Your Databricks Credentials
 
@@ -35,44 +30,14 @@ from reflex_image_zoom import image_zoom
    - Copy the Server hostname (this is your **DATABRICKS_HOST**).
    - Copy the HTTP path removing the `/sql/1.0/warehouses/` prefix (this is your **DATABRICKS_WAREHOUSE_ID**).
 
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_1.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
-
+![databricks_integration_1.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_1.webp)
 
 3 - Get your **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA**:
    - Click the SQL Editor from the sidebar.
    - Choose the **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA** from the dropdowns as shown below.
 
+![databricks_integration_4.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_4.webp)
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_4.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
-
-```python eval
-rx.box(height="2rem")
-```
 
 4 - Obtain your authentication credentials:
 
@@ -90,38 +55,9 @@ There are two methods to authenticate your app with Databricks: using a **Person
    - Click **Manage** in Access Tokens.
    - Click **Generate New Token**, provide a name and expiration, then copy it (**DATABRICKS_TOKEN**).
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_2.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_2.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_2.webp)
 
-
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_3.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
-
-
-
+![databricks_integration_3.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_3.webp)
 
 --
 --tab OAuth
@@ -129,117 +65,31 @@ rx.el.div(
 
 - Open the dropdown in the top right corner and select **Manage Account**.
 
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_1.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_1.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_1.webp)
 
 - Select `Users and Groups`
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_2.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_2.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_2.webp)
 
 - Select the `Service Principals` tab and click `Add Service Principal`.
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_3.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_3.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_3.webp)
 
 - Fill in the details and click `Add Service Principal`.
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_4.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_4.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_4.webp)
 
 - Click the `Credentials and Secrets` tab and click `Generate Secret`.
 
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_5.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_5.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_5.webp)
 
 - Set a lifetime for the secrets and click `Generate`.
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_6.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_6.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_6.webp)
 
 - Copy the generated **DATABRICKS_CLIENT_ID** and **DATABRICKS_CLIENT_SECRET**.
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/databricks_integration_oauth_7.webp",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![databricks_integration_oauth_7.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_oauth_7.webp)
 
 --
 

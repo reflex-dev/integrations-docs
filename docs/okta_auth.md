@@ -18,13 +18,6 @@ With Okta, your app can:
 - Integrate with other identity workflows like MFA or adaptive policies.
 
 
-```python exec
-import reflex as rx
-from reflex_image_zoom import image_zoom
-```
-
-
-
 ## Step 1: Set Up Okta OIDC App
 
 Before connecting, you need to create an OIDC application in the Okta Admin Console:
@@ -34,35 +27,11 @@ Before connecting, you need to create an OIDC application in the Okta Admin Cons
 
 2 - Click **Create App Integration**
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/okta_auth_1.png",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![Okta Auth 1](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/okta_auth_1.png)
 
 3 - Select **OIDC – OpenID Connect** and choose **Web Application**
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/okta_auth_2.png",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![Okta Auth 2](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/okta_auth_2.png)
 
 4 - Configure your app settings:
    - **Allow wildcard * in sign-in redirect URIs**
@@ -72,37 +41,13 @@ rx.el.div(
      `https://{your-sandbox}`
    - Assign to the correct **Group** or **Everyone** depending on your access control
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/okta_auth_3.png",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![Okta Auth 3](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/okta_auth_3.png)
 
 5 - Save the app integration.
 
 6 - Copy your **Client ID** (`OKTA_CLIENT_ID`) and **Client Secret** (`OKTA_CLIENT_SECRET`) from the app settings.
 
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/okta_auth_4.png",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![Okta Auth 4](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/okta_auth_4.png)
 
 
 ## Step 2: Finding Your Okta Issuer URI
@@ -117,21 +62,7 @@ If your Issuer URI is `https://{yourOktaDomain}.okta.com/oauth2/default`
 
 Use `https://{yourOktaDomain}.okta.com`
 
-
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src="/ai_builder/integrations/okta_auth_5.png",
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
+![Okta Auth 5](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/okta_auth_5.png)
 
 
 > **Note:** Always use separate Okta apps for dev, staging, and production environments to avoid mixing credentials.

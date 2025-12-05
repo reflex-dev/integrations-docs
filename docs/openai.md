@@ -6,30 +6,6 @@ description: Connect to OpenAI's powerful language models for text generation, a
 
 The **OpenAI Integration** allows your app to use OpenAI APIs for features such as text generation, embeddings, and other AI-powered functionality.
 
-
-
-```python exec
-import reflex as rx
-from reflex_image_zoom import image_zoom
-```
-
-```python eval
-rx.el.div(
-    image_zoom(
-        rx.image(
-            src=rx.color_mode_cond(
-                "/ai_builder/integrations/open_ai_light.webp",
-                "/ai_builder/integrations/open_ai_dark.webp",
-            ),
-            class_name="p-2 rounded-md h-auto",
-            border=f"0.81px solid {rx.color('slate', 5)}",
-        ),
-        class_name="rounded-md overflow-hidden",
-    ),
-    class_name="w-full flex flex-col rounded-md cursor-pointer",
-)
-```
-
 ## Step 1: Obtain an OpenAI API Key
 
 1. Go to the [OpenAI Platform](https://platform.openai.com/).
