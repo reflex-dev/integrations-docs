@@ -117,3 +117,19 @@ Once connected, the AI Builder can execute queries directly against your Databri
 * **Permissions:** Ensure your token or service account has the required workspace and table permissions.
 * **Combine with AI:** Use query outputs to power models, summaries, or alerts in real time.
 
+
+# How to Enable Login as an Admin
+
+- Login to Databricks
+- Go to manage account
+
+![databricks_admin_auth_1.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_admin_auth_1.webp)
+
+- Go to Setting → Apps Connections → Add new connection
+
+![databricks_admin_auth_2.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_admin_auth_2.webp)
+
+- Give it a name, enter the redirect URL that Reflex Build provides, Click `All APIs` and uncheck `Generate a client secret` and then add.
+   - URL: `https://build.reflex.dev/_reflex_oidc_databricks/authorization-code/callback`
+
+![databricks_admin_auth_3.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_admin_auth_3.webp)
