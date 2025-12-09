@@ -39,4 +39,3 @@ Once connected, your app can use Hugging Face models directly in workflows, UI a
 * **Use environment-specific tokens:** Separate dev, staging, and production access.  
 * **Open-source flexibility:** Models can be run fully locally or through Hugging Face’s hosted endpoints.  
 * **Broad ecosystem:** Hugging Face supports thousands of community and commercial models for rapid prototyping and production use.
-```
