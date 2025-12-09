@@ -1,3 +1,7 @@
+---
+tags: Data Infrastructure
+description: Connect to Amazon Web Services (AWS) for cloud storage, databases, compute, AI/ML, and more.
+---
 # AWS Integration
 
 The **AWS Integration** allows your app to connect to [Amazon Web Services (AWS)](https://aws.amazon.com/) — the world's most comprehensive cloud platform. Once connected, your app can access 200+ AWS services including storage, databases, compute, AI/ML, and more using the boto3 SDK.
