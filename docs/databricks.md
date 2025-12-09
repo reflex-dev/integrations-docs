@@ -125,7 +125,7 @@ Once connected, the AI Builder can execute queries directly against your Databri
 
 ![databricks_admin_auth_1.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_admin_auth_1.webp)
 
-- Go to Setting → Apps Connections → Add new connection
+- Go to **Settings** → **Apps Connections** → **Add new connection**
 
 ![databricks_admin_auth_2.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_admin_auth_2.webp)
 
