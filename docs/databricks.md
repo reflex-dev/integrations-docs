@@ -21,9 +21,10 @@ With Databricks, your app can:
 
 ## Step 1: Get Your Databricks Credentials
 
-1 - Log in to your [Databricks Workspace](https://databricks.com/).
+### 1 - Log in to your [Databricks Workspace](https://databricks.com/).
 
-2 - Get your **DATABRICKS_HOST** and **DATABRICKS_WAREHOUSE_ID**:
+### 2 - Get your **DATABRICKS_HOST** and **DATABRICKS_WAREHOUSE_ID**:
+
    - Go to `SQL Warehouses` from the sidebar.
    - Select your desired warehouse.
    - Click `Connection details`.
@@ -32,36 +33,30 @@ With Databricks, your app can:
 
 ![databricks_integration_1.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_1.webp)
 
-3 - Get your **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA**:
+### 3 - Get your **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA**:
    - Click the SQL Editor from the sidebar.
    - Choose the **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA** from the dropdowns as shown below.
 
 ![databricks_integration_4.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_4.webp)
 
 
-4 - Obtain your authentication credentials:
+### 4 - Obtain your authentication credentials:
 
-There are two methods to authenticate your app with Databricks: using a **Personal Access Token** or via **OAuth**. Choose one of the methods below to obtain the necessary credentials.
+There are two methods to authenticate your app with Databricks: using interactive U2M **OAuth** or via registered M2M **Service Principal**. Choose one of the methods below to obtain the necessary credentials.
 
 
 ---md tabs
 
---tab Personal Access Token
-## Generate a Personal Access Token (DATABRICKS_TOKEN)
+--tab OAuth with Databricks
+#### Interactive Login with your Databricks Account
 
+If your workspace administrator has already added Reflex as a Connected App in your Databricks workspace, you should see a "Login with Databricks" button after entering your DATABRICKS_HOST.
 
-   - Click on your profile icon → **Settings**.
-   - Click **Developer**.
-   - Click **Manage** in Access Tokens.
-   - Click **Generate New Token**, provide a name and expiration, then copy it (**DATABRICKS_TOKEN**).
-
-![databricks_integration_2.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_2.webp)
-
-![databricks_integration_3.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_3.webp)
+If the Connected App has not been configured, an administrator can [follow these instructions](https://www.notion.so/Databricks-Integration-2b2024b7336e80c78e91e8a0fb138fcf?pvs=73) to complete the one-time setup.
 
 --
---tab OAuth
-## Use OAuth (DATABRICKS_CLIENT_ID and DATABRICKS_CLIENT_SECRET)
+--tab Service Principal
+#### M2M Service Principal (DATABRICKS_CLIENT_ID and DATABRICKS_CLIENT_SECRET)
 
 - Open the dropdown in the top right corner and select **Manage Account**.
 
@@ -99,13 +94,15 @@ There are two methods to authenticate your app with Databricks: using a **Person
 
 ## Step 2: Configure the Integration in Your App
 
-1. In your app, go to **Integrations** and **Add Databricks**.  
-2. Paste your 
-   1. **DATABRICKS_TOKEN**
-   2. **DATABRICKS_HOST**
-   3. **DATABRICKS_WAREHOUSE_ID**
-   4. **DATABRICKS_CATALOG**
-   5. **DATABRICKS_SCHEMA**  
+1. In your app, go to **Integrations** and **Add Databricks**.
+2. Paste your **DATABRICKS_HOST**
+3. Select your authentication method:
+   - OAuth, if configured.
+   - Service Principal, provide the client ID and secret gathered previously.
+2. Paste or select your
+   1. **DATABRICKS_WAREHOUSE_ID**
+   2. **DATABRICKS_CATALOG**
+   3. **DATABRICKS_SCHEMA**  
 3. Click **Connect** to validate and save your integration.
 
 Once connected, the AI Builder can execute queries directly against your Databricks environment.
