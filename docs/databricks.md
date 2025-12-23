@@ -21,9 +21,10 @@ With Databricks, your app can:
 
 ## Step 1: Get Your Databricks Credentials
 
-1 - Log in to your [Databricks Workspace](https://databricks.com/).
+### 1 - Log in to your [Databricks Workspace](https://databricks.com/).
 
-2 - Get your **DATABRICKS_HOST** and **DATABRICKS_WAREHOUSE_ID**:
+### 2 - Get your **DATABRICKS_HOST** and **DATABRICKS_WAREHOUSE_ID**:
+
    - Go to `SQL Warehouses` from the sidebar.
    - Select your desired warehouse.
    - Click `Connection details`.
@@ -32,22 +33,22 @@ With Databricks, your app can:
 
 ![databricks_integration_1.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_1.webp)
 
-3 - Get your **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA**:
+### 3 - Get your **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA**:
    - Click the SQL Editor from the sidebar.
    - Choose the **DATABRICKS_CATALOG** and **DATABRICKS_SCHEMA** from the dropdowns as shown below.
 
 ![databricks_integration_4.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_4.webp)
 
 
-4 - Obtain your authentication credentials:
+### 4 - Obtain your authentication credentials:
 
-There are two methods to authenticate your app with Databricks: using a **Personal Access Token** or via **OAuth**. Choose one of the methods below to obtain the necessary credentials.
+There are two methods to authenticate your app with Databricks: using interactive U2M **OAuth** or via registered M2M **Service Principal**. Choose one of the methods below to obtain the necessary credentials.
 
 
 ---md tabs
 
 --tab OAuth with Databricks
-## Login with your Databricks Account
+#### Interactive Login with your Databricks Account
 
 If your workspace administrator has already added Reflex as a Connected App in your Databricks workspace, you should see a "Login with Databricks" button after entering your DATABRICKS_HOST.
 
@@ -55,7 +56,7 @@ If the Connected App has not been configured, an administrator can [follow these
 
 --
 --tab Service Principal
-## Use M2M Service Principal (DATABRICKS_CLIENT_ID and DATABRICKS_CLIENT_SECRET)
+#### M2M Service Principal (DATABRICKS_CLIENT_ID and DATABRICKS_CLIENT_SECRET)
 
 - Open the dropdown in the top right corner and select **Manage Account**.
 
