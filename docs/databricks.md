@@ -49,7 +49,9 @@ There are two methods to authenticate your app with Databricks: using a **Person
 --tab OAuth with Databricks
 ## Login with your Databricks Account
 
-If your workspace administrator has added Reflex as a Connected App in your workspace, you should see a "Login with Databricks" button when the OAuth tab is selected.
+If your workspace administrator has already added Reflex as a Connected App in your Databricks workspace, you should see a "Login with Databricks" button after entering your DATABRICKS_HOST.
+
+If the Connected App has not been configured, an administrator can [follow these instructions](https://www.notion.so/Databricks-Integration-2b2024b7336e80c78e91e8a0fb138fcf?pvs=73) to complete the one-time setup.
 
 --
 --tab Service Principal
