@@ -46,22 +46,14 @@ There are two methods to authenticate your app with Databricks: using a **Person
 
 ---md tabs
 
---tab Personal Access Token
-## Generate a Personal Access Token (DATABRICKS_TOKEN)
+--tab OAuth with Databricks
+## Login with your Databricks Account
 
-
-   - Click on your profile icon → **Settings**.
-   - Click **Developer**.
-   - Click **Manage** in Access Tokens.
-   - Click **Generate New Token**, provide a name and expiration, then copy it (**DATABRICKS_TOKEN**).
-
-![databricks_integration_2.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_2.webp)
-
-![databricks_integration_3.webp](https://raw.githubusercontent.com/reflex-dev/integrations-docs/refs/heads/main/images/docs/databricks_integration_3.webp)
+If your workspace administrator has added Reflex as a Connected App in your workspace, you should see a "Login with Databricks" button when the OAuth tab is selected.
 
 --
---tab OAuth
-## Use OAuth (DATABRICKS_CLIENT_ID and DATABRICKS_CLIENT_SECRET)
+--tab Service Principal
+## Use M2M Service Principal (DATABRICKS_CLIENT_ID and DATABRICKS_CLIENT_SECRET)
 
 - Open the dropdown in the top right corner and select **Manage Account**.
 
@@ -99,13 +91,15 @@ There are two methods to authenticate your app with Databricks: using a **Person
 
 ## Step 2: Configure the Integration in Your App
 
-1. In your app, go to **Integrations** and **Add Databricks**.  
-2. Paste your 
-   1. **DATABRICKS_TOKEN**
-   2. **DATABRICKS_HOST**
-   3. **DATABRICKS_WAREHOUSE_ID**
-   4. **DATABRICKS_CATALOG**
-   5. **DATABRICKS_SCHEMA**  
+1. In your app, go to **Integrations** and **Add Databricks**.
+2. Paste your **DATABRICKS_HOST**
+3. Select your authentication method:
+   - OAuth, if configured.
+   - Service Principal, provide the client ID and secret gathered previously.
+2. Paste or select your
+   1. **DATABRICKS_WAREHOUSE_ID**
+   2. **DATABRICKS_CATALOG**
+   3. **DATABRICKS_SCHEMA**  
 3. Click **Connect** to validate and save your integration.
 
 Once connected, the AI Builder can execute queries directly against your Databricks environment.
