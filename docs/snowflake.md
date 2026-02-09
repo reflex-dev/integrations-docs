@@ -8,19 +8,24 @@ To enable OAuth for your Snowflake account, an administrator must first register
 
 ```python exec
 import reflex as rx
-from flexgen.integrations.snowflake import SnowflakeAuthState
 from flexgen.ui.components.markdown import get_base_component_map
+try:
+    from flexgen.integrations.snowflake import SnowflakeAuthState
+except ImportError:
+    redirect_uri = "https://build.reflex.dev/_reflex_oidc_snowflake/authorization-code/callback"
+else:
+    redirect_uri = SnowflakeAuthState.redirect_uri
 ```
 
 ```python eval
 # Actually render the real redirect_uri for copy/paste
-get_base_component_map()["codeblock"](
+get_base_component_map()["pre"](
     f"""CREATE SECURITY INTEGRATION oauth_reflex_build_int
   TYPE = OAUTH
   ENABLED = TRUE
   OAUTH_CLIENT = CUSTOM
   OAUTH_CLIENT_TYPE = 'PUBLIC'
-  OAUTH_REDIRECT_URI = '{SnowflakeAuthState.redirect_uri}'
+  OAUTH_REDIRECT_URI = '{redirect_uri}'
   OAUTH_ISSUE_REFRESH_TOKENS = TRUE
   OAUTH_REFRESH_TOKEN_VALIDITY = 86400;""",
     language="sql",
