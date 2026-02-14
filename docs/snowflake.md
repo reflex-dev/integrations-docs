@@ -1,4 +1,4 @@
-# Snowflake ❄️ 🏗️
+# Snowflake
 
 Snowflake is a cloud-based data warehousing platform that enables users to store, manage, and analyze large volumes of data. It provides a scalable and flexible architecture that separates storage and compute resources, allowing for efficient data processing and querying.
 
@@ -36,7 +36,7 @@ get_base_component_map()["pre"](
 
 NOTE: you must use a non-admin account to complete the OAuth flow.
 
-## Work in Progress
+# Roadmap 
 
-Currently this integration does not support external OAuth flows, key pair
-authentication, or external network access.
+In the future, this integration will be extended to support external OAuth
+flows, service principal authentication, and external network access.
